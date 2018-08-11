@@ -1,0 +1,303 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+	outline: none;
+	border-radius: 2px;
+}
+ul, ol {
+	list-style: none;
+}
+body {
+	background: #000;
+	color: #fff;
+}
+a {
+	text-decoration: none;
+	color: lime;
+}
+
+h1 {
+	font-size: 24px;
+	text-align: center;
+	color: greenyellow;
+	font-style: italic;
+}
+
+.text_error {
+	font-weight: bold;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	padding: 2px 5px;
+	margin: inherit;
+	color: yellow;
+	background: darkred;
+}
+
+.choose {
+	display: block;
+	width: max-content;
+	margin: 5px 0;
+	cursor: pointer;
+}
+.choose>span {
+	margin-left: 5px;
+}
+.choose>input, .choose>span {
+	vertical-align: middle;
+}
+
+input {
+	padding: 1px 5px;
+	background: #333;
+	color: #6C4;
+	border: 1px solid #666;
+}
+.serach {
+	width: 100%;
+	border: none;
+}
+.btn {
+	padding: 1px 10px;
+	font-style: italic;
+	background: #444;
+	color: #ff0;
+	cursor: pointer;
+	border: 1px solid #f90;
+}
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	min-width: 300px;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+	background: #111;
+}
+header {
+	background: #654;
+}
+header .wrapper {
+	background: none;
+}
+.wrapper li {
+	height: 45px;
+	display: flex;
+	align-items: center;
+	margin: 0 1px;
+}
+.wrapper li>a{
+	color: #321;
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+	line-height: 45px;
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	background: #987;
+}
+
+.wrapper.mid {
+	align-items: stretch;
+}
+
+nav {
+	display: block;
+	width: calc(25% - 10px);
+	/*min-width: 100px;*/
+	margin: 5px;
+	background: #444;
+}
+nav a {
+	display: block;
+	width: 100%;
+	height: 30px;
+	padding: 10px;
+	color: #ff0;
+}
+nav a:hover {
+	background: #333;
+}
+
+main {
+	width: calc(75% - 10px);
+	display: block;
+	margin: 5px;
+	padding: 5px;
+	background: #334;
+	position: relative;
+}
+
+.logout {
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+
+.inner {
+	min-width: 300px;
+	max-width: 100%;
+	padding: 5px;
+	background: #334;
+	color: #fc0;
+}
+.inner input {
+	padding: 4px;
+	background: #333;
+	color:#6C4;
+	outline: none;
+	border: 1px solid #999;
+}
+.inner textarea {
+	resize: none;
+	margin: 0 auto;
+	padding: 4px;
+	width: 100%;
+	height: 375px;
+	background: #333;
+	color: #ccc;
+	outline: none;
+	border: 1px solid #999;
+}
+.inner input[type="submit"] {
+	cursor: pointer;
+	color: #fc0;
+	padding: 3px 17px;
+  margin: 10px 0;
+}
+
+/*.enter {
+	min-height: 100px;
+	height: 100%;
+}*/
+
+.write input[type="text"]{
+	width: 100%;
+}
+
+.change {
+	padding: 0 10px;
+	font-weight: bold;
+	font-style: italic;
+	color: #FF9800FF;
+}
+select {
+	width: 50%;
+	margin: 25px 5px 0;
+	padding: 3px 5px;
+}
+button.change {
+	border: none;
+	background: yellow;
+	cursor: pointer;
+	color: #000;
+	padding: 3px 15px;
+	margin: 5px;
+}
+.delete {
+	background: #f30 !important;
+}
+
+/* post */
+article {
+	padding: 10px;
+	background: #334;
+	color: #ccc;
+}
+
+
+/* adminka */
+
+form.admin {
+	display: block;
+	text-align: center;
+	width: 450px;
+	margin: 20px auto;
+	padding: 15px;
+	background: #aaa;
+}
+form.admin input {
+	display: block;
+	width: 250px;
+	margin: 10px auto;
+	padding: 3px 7px;
+	color: lime;
+	background: #334;
+}
+form.admin input::placeholder {
+	color: #777;
+	font-size: small;
+	font-style: italic;
+}
+form.admin button {
+	text-transform: uppercase;
+	font-weight: bold;
+	border: none;
+	padding: 3px 15px;
+	color: orange;
+	background: #334;
+	cursor: pointer;
+}
+
+.box {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 900px;
+	min-width: 450px;
+	margin: 25px auto;
+	background: none;
+	/*border: 1px solid silver;*/
+	overflow: hidden;
+}
+.row {
+	display: flex;
+	width: 100%;
+	height: 75px;
+}
+.col {
+	display: flex;
+	align-items: center;
+	width: 30%;
+	background: #334;
+	color: #ccc;
+	border: 1px solid #000;
+	border-radius: 0;
+	resize: none;
+	padding: 10px;
+	letter-spacing: 1px;
+}
+.col:nth-child(2) {
+	width: 40%;
+}
+textarea.col {
+	color: #fa0;
+	font-style: italic;
+}
+.top>.col {
+	justify-content: center;
+	color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: #ff0;
+}
+.save {
+	display: flex;
+	width: 300px;
+	justify-content: space-around;
+}
+#save {
+	background: #ff0;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: none;
+	padding: 10px 55px;
+	cursor: pointer;
+	margin: auto;
+	margin-top: 20px;
+}
