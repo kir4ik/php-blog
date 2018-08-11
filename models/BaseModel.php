@@ -35,8 +35,12 @@ abstract class BaseModel
 		return $this->driverDB->select( $this->table, [$colName => $value], $fetch );
 	}
 
-	public function add(array $params)
+	public function add(array $params, $whithCheck = true)
 	{
+		if (!$whithCheck) {
+			return $this->driverDB->insert($this->table, $params);
+		}
+		
 		$this->validator->execute($params);
 
 		if($this->validator->success) {

@@ -38,6 +38,14 @@ switch ($view) {
 		$controller = 'User';
 		break;
 
+	case 'sign-up':
+		$controller = 'User';
+		break;
+
+	case 'greeting':
+		$controller = 'User';
+		break;
+
 	case 'handler':
 		$controller = 'User';
 		break;
@@ -50,6 +58,13 @@ switch ($view) {
 }
 
 $controller = sprintf('controller\%sController', $controller);
+
+$view = explode("-", $view);
+for ($i = 1; $i < count($view); $i++) {
+	$view[$i] = ucfirst($view[$i]);
+}
+$view = implode("", $view);
+
 $view = sprintf('%sAction', $view);
 
 $controller = new $controller();

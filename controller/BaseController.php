@@ -77,7 +77,8 @@ class BaseController
 				'content' => $this->frame_content,
 				'artNames' => $artNames,
 				'shortArtNames' => $shortArtNames,
-				'current_user_name' => $this->current_user_name
+				'current_user_name' => $this->current_user_name,
+				'isAuth' => $this->AuthModel->getStatusAuth()
 			]);
 	}
 
@@ -101,6 +102,22 @@ class BaseController
 
 		header('location: /login');
 		die;
+	}
+
+	public function greetingAction()
+	{
+		if ($this->request->session('id_user') === null) {
+			header('location: /login');
+			die;
+		}
+
+		$this->current_user = $this->UserModel->getByValue(USER_PRIMARY_KEY, $this->request->session('id_user'));
+
+		$this->frame_content = $this->build('greeting',
+			[
+				'name' => $this->current_user[USER_LOGIN]
+			]
+	);
 	}
 
 	public function internalErrorAction($message)

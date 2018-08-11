@@ -14,6 +14,9 @@
 				<button class="btn" name="search">поиск</button>
 			</form></li> -->
 			<li><a href="/login"><?=$current_user_name?></a></li>
+		<?php if(!$isAuth): ?>
+			<li><a href="/sign-up">Sign Up</a></li>
+		<?php endif; ?>
 		</ul>
 	</header>
 	<div class="wrapper mid">

@@ -46,4 +46,15 @@ class SessionModel extends BaseModel
 			]
 		);
 	}
+
+	public function addSession($id, $online = 1)
+	{
+		$this->add(
+			[
+				SESS_PRIMARY_KEY => $id,
+				SESS_ONLINE => $online,
+				SESS_RENEWAL => date("Y-m-d H:i:s")
+			]
+		);
+	}
 }
